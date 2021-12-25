@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "lite-server",
+    "start": "webpack-dev-server --open",
     "build": "webpack --stats detailed"
   },
   "repository": {
@@ -26,6 +26,7 @@
   "dependencies": {
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
-    "babel-loader": "^8.2.3"
+    "babel-loader": "^8.2.3",
+    "webpack-dev-server": "^4.7.1"
   }
 }

@@ -1,10 +1,12 @@
 const path = require("path");
+const { resolve } = require("path/posix");
 
 module.exports = {
   entry: "./src/hellow.js",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+    assetModuleFilename: "assets/[hash][ext][query]",
   },
   mode: "none",
   module: {
@@ -24,5 +26,10 @@ module.exports = {
         type: "asset/resource",
       },
     ],
+  },
+  devServer: {
+    static: {
+      directory: __dirname,
+    },
   },
 };
